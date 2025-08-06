@@ -11,7 +11,6 @@ app.use(cors({
 }))
 
 import routesFetchProfile from './routes/fetchProfile.js'
-import { log } from 'console';
 app.use('/profile', routesFetchProfile);
 
 app.get('/', (req,res)=> {
