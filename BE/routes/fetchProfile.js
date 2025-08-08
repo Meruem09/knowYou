@@ -26,7 +26,7 @@ async function fetchProfile(url) {
 
 router.post('/',async (req,res)=>{
     const {url} = req.body;
-    if(!url.include("linkdin.com/in/")){
+    if(!url.includes("linkedin.com/in/")){
         return res.status(400).json({error: "Invalid url of profile"});
     }
     const data = await fetchProfile(url)
